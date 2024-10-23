@@ -3,7 +3,7 @@ name: Update VERSION and Create PR to main
 on:
   push:
     tags:
-      - 'v*' # vで始まるタグがプッシュされたときにトリガー
+      - "v*" # vで始まるタグがプッシュされたときにトリガー
 
 jobs:
   update-version:
@@ -41,8 +41,8 @@ jobs:
       - name: Create Pull Request to main
         uses: peter-evans/create-pull-request@v3
         with:
-          title: 'release: ${{ env.VERSION }}'
-          body: 'This PR updates the VERSION file.'
+          title: "release: ${{ env.VERSION }}"
+          body: "This PR updates the VERSION file."
           base: main
-          head: develop
+          branch: develop
           token: ${{ secrets.GITHUB_TOKEN }} # 自動で提供されるトークン
