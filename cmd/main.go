@@ -10,5 +10,6 @@ import (
 var version string
 
 func main() {
-	fmt.Println(version, samplego.Message)
+	fmt.Println(version)
+	samplego.Hello()
 }
