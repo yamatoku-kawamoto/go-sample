@@ -1,0 +1,61 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "container-build",
+            "type": "shell",
+            "command": "podman build --squash --tag phalanx:1.0.0-alpha .",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "go-run",
+            "type": "shell",
+            "command": "go run ./phalanx/cmd --env .env",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "go-fmt",
+            "type": "shell",
+            "command": "go fmt ./phalanx/...",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "go-test",
+            "type": "shell",
+            "command": "go test ./phalanx/...",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "go-benchmark",
+            "type": "shell",
+            "command": "go test -bench -benchmem ./phalanx/...",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "go-credits",
+            "type": "shell",
+            "command": "gocredits --skip-missing . > CREDITS",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "go-licenses",
+            "type": "shell",
+            "command": "go-licenses report github.com/google/go-licenses > licenses.csv",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "go-build",
+            "type": "shell",
+            "command": "go build -o bin/phalanx.exe -trimpath -ldflags=\"-s -w -X main.VERSION=1.0.0-alpha -X main.MODE=Release\" ./phalanx/cmd",
+            "group": "build",
+            "problemMatcher": []
+        }
+    ]
+}

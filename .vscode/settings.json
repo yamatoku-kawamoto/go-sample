@@ -1,0 +1,30 @@
+{
+    "[go]": {
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "golang.go",
+        "editor.codeActionsOnSave": [
+            "source.organizeImports",
+            "source.addMissingImports",
+            "source.fixAll.eslint"
+        ]
+    },
+    "[json]": {
+        "editor.formatOnSave": true,
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace"
+    },
+    "[jsonc]": {
+        "editor.formatOnSave": true,
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace"
+    },
+    "files.eol": "\n",
+    "files.exclude": {
+        "**/.git": false,
+    }
+}
