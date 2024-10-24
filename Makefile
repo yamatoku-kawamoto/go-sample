@@ -25,6 +25,6 @@ go-licenses:
 go-build:
 	@go build -o bin/$(APP_BIN) $(BUILD_FLAGS) $(BUILD_FILES)
 
-.PHONY: go-build
+.PHONY: linux-build
 linux-build:
 	@GOOS=linux GOARCH=arm64 go build -o bin/$(APP_BIN) $(BUILD_FLAGS) $(BUILD_FILES)
